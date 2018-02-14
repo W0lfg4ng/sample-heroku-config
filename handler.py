@@ -1,79 +1,81 @@
 from datetime import datetime
 
-[y]
 
 def hello():
     print('Здравствуйте')
-    print('Введите дату в виде гггг-мм-дд, либо введите "сегодкя" для получения информации о текущем дне,  и я скажу расписание')
+    print('Введите дату в виде гггг.мм.дд, либо введите "сегодня" для получения информации о текущем дне, и я скажу расписание')
+
 
 def handle_message():
     date = input()
     if len(date) == 10:
-        t = datetime.strptime(date, "%Y-%m-%d")
+        t = datetime.strptime(date, "%d.%m.%Y")
         t.isoweekday()
         day = (t.isoweekday())
-
-def send_message():
-    if day == 1:
-        print("Литература, 404")
-        print("Литература, 404")
-        print("Английский язык, 206")
-        print("Французский язык, 310")
-        print("Физкультура, спортзал")
-        print("Химия, 407")
-        print("История, 203")
-        print("История, 203")
-        print("История, 203")
-    if day == 2:
-        print("Английский язык, 531")
-        print("Французский язык, 312")
-        print("Алгебра, 305")
-        print("Алгебра, 305")
-        print("Биология, 204")
-        print("Биология, 204")
-        print("МХК, 402")
-if day == 3:
-        print("Русский язык, 203")
-        print("Русский язык, 203")
-        print("")
-        print("")
-        print("")
-        print("")
-        print("")
-        print("")
-        print("")
-if day == 2:
-        print("")
-        print("")
-        print("")
-        print("")
-        print("")
-        print("")
-        print("")
-        print("")
-        print("")
-    if day == 2:
-        print("")
-        print("")
-        print("")
-        print("")
-        print("")
-        print("")
-        print("")
-        print("")
-        print("")
-    if day == 2:
-        print("")
-        print("")
-        print("")
-        print("")
-        print("")
-        print("")
-        print("")
-        print("")
-        print("")
-
-hello()
-handle_message()
-send_message()
-
+    else:
+        return 'Введите дату в корректном формате'
+    lessons = [
+        [
+            {"subject": "Литература", "teacher": "Угрехелидзе В. Г."},
+            {"subject": "Литература", "teacher": "Угрехелидзе В. Г."},
+            {"subject": "", "teacher": ""},
+            {"subject": "Французский язык", "teacher": "Архипова Д. В."},
+            {"subject": "", "teacher": ""},
+            {"subject": "Химия", "teacher": "Малютина Е. М."},
+            {"subject": "История", "teacher": "Авдеев А. Г."},
+            {"subject": "История", "teacher": "Авдеев А. Г."},
+            {"subject": "История", "teacher": "Авдеев А. Г."},
+            {"subject": "", "teacher": ""}
+        ],
+        [
+            {"subject": "", "teacher": ""},
+            {"subject": "Французский язык", "teacher": "Архипова Д. В."},
+            {"subject": "", "teacher": ""},
+            {"subject": "Алгебра", "teacher": ""},
+            {"subject": "Алгебра", "teacher": ""},
+            {"subject": "Биология", "teacher": "Черткова Е. Р."},
+            {"subject": "Биология", "teacher": "Черткова Е. Р."},
+            {"subject": "", "teacher": ""},
+            {"subject": "", "teacher": ""},
+            {"subject": "", "teacher": ""}
+        ],
+        [
+            {"subject": "Русский язык", "teacher": "Угрехелидзе В. Г."},
+            {"subject": "Русский язык", "teacher": "Угрехелидзе В. Г."},
+            {"subject": "", "teacher": ""},
+            {"subject": "", "teacher": ""},
+            {"subject": "Геометрия", "teacher": "Назарова К. А."},
+            {"subject": "Геометрия", "teacher": "Назарова К. А."},
+            {"subject": "", "teacher": ""},
+            {"subject": "", "teacher": ""},
+            {"subject": "", "teacher": ""},
+            {"subject": "", "teacher": ""}
+        ],
+        [
+            {"subject": "", "teacher": ""},
+            {"subject": "Французский язык", "teacher": "Архипова Д. В."},
+            {"subject": "Химия", "teacher": "Малютина Е. М."},
+            {"subject": "Химия", "teacher": "Малютина Е. М."},
+            {"subject": "Алгебра", "teacher": ""},
+            {"subject": "Алгебра", "teacher": ""},
+            {"subject": "", "teacher": ""},
+            {"subject": "", "teacher": ""},
+            {"subject": "", "teacher": ""},
+            {"subject": "", "teacher": ""}
+        ],
+        [
+            {"subject": "", "teacher": ""},
+            {"subject": "", "teacher": ""},
+            {"subject": "", "teacher": ""},
+            {"subject": "", "teacher": ""},
+            {"subject": "", "teacher": ""},
+            {"subject": "История", "teacher": "Авдеев А. Г."},
+            {"subject": "Литература", "teacher": "Угрехелидзе В. Г."},
+            {"subject": "Русский язык", "teacher": "Угрехелидзе В. Г."},
+            {"subject": "Биология", "teacher": "Черткова Е. Р."},
+            {"subject": "Биология", "teacher": "Черткова Е. Р."}
+        ],
+        ["Выходной"],
+        ["Выходной"]
+    ]
+    return lessons[day]
