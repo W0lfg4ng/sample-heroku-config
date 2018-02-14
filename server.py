@@ -11,4 +11,4 @@ while True:
 
         chat_id = elem["message"]["chat"]["id"]
 
-        requests.post("...", params={ "chat_id": chat_id, "text": ans } )
+        requests.post("https://api.telegram.org/bot253609155:AAGCp5I5uJiwZkqkyCVEatH3b8vi3RYxuY8/sendMessage", params={ "chat_id": chat_id, "text": ans } )
