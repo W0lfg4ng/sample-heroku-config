@@ -75,7 +75,7 @@ def handle_message(text):
     if len(text) == 10:
         t = datetime.strptime(text, "%Y-%m-%d")
         t.isoweekday()
-        day = (t.isoweekday())
+        day = (t.isoweekday()) - 1
         print(day)
     else:
         return 'Введите дату в корректном формате'
