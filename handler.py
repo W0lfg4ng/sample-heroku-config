@@ -7,6 +7,7 @@ def hello():
 
 
 def handle_message(text):
+    print(text)
     if len(text) == 10:
         t = datetime.strptime(text, "%Y-%m-%d")
         t.isoweekday()
