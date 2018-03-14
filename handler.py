@@ -12,6 +12,7 @@ def handle_message(text):
         t = datetime.strptime(text, "%Y-%m-%d")
         t.isoweekday()
         day = (t.isoweekday())
+        print(day)
     else:
         return 'Введите дату в корректном формате'
     lessons = [
