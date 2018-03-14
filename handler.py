@@ -80,4 +80,4 @@ def handle_message(text):
     else:
         return 'Введите дату в корректном формате'
 
-    return lessons[day]
+    return str(lessons[day])
