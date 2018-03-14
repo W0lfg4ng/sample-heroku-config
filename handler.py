@@ -6,7 +6,7 @@ def hello():
     print('Введите дату в виде дд-мм-гггг, либо введите "сегодня" для получения информации о текущем дне, и я скажу расписание')
 
 
-def handle_message():
+def handle_message(text):
     date = input()
     if len(date) == 10:
         t = datetime.strptime(date, "%Y-%m-%d")
